@@ -12,7 +12,8 @@ Linux Mint or Debian. The only supported language is french.
 1. Download and install the latest Node.js version.
 2. Clone the repository and check out the master branch: `git clone https://github.com/Fabien-Couthouis/SmartMirror`
 3. Enter the repository: `cd ~/SmartMirror`
-4. Install and run the app: `npm install && npm start`
+4. Install MagicMirror: `npm install`
+5. Install Kalliope. See the official doc(https://github.com/kalliope-project/kalliope/blob/master/Docs/installation.md)
 
 ### Launching
 1. Enter the repository: `cd ~/SmartMirror`
