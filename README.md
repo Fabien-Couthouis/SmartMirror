@@ -1,4 +1,4 @@
-#SmartMirror: personnal configuraton for MagicMirror 
+#SmartMirror: personnal configuration for MagicMirror 
 
 
 **SmartMirror** contains a preconfigured installation of both [MagicMirror](https://github.com/MichMich/MagicMirror) and the 
