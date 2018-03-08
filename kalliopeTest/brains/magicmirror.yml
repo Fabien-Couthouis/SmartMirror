@@ -1,0 +1,33 @@
+---
+
+
+  #~ - name: "mm-on-start-listening"
+    #~ signals: []
+    #~ neurons:
+      #~ - magic_mirror:
+          #~ mm_url: "http://127.0.0.1:8080/kalliope"
+          #~ notification: "START_LISTENING"
+          #~ payload: "listen"
+  - name: "mm-on-start-listening"
+    signals: []
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "START_LISTENING"
+          payload: "listen"
+          
+  - name: "mm-order-found"
+    signals: []
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "ORDER_FOUND"
+          payload: "order_found"
+          
+  - name: "mm-order-not-found"
+    signals: []
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "ORDER_NOT_FOUND"
+          payload: "order-not-found"
