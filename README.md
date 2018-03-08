@@ -1,4 +1,4 @@
-![SmartMirror: personnal configuraton for MagicMirror ]
+ [SmartMirror: personnal configuraton for MagicMirror ]
 
 
 **SmartMirror** contains a preconfigured installation of both MagicMirror(https://github.com/MichMich/MagicMirror) and the 
@@ -33,17 +33,14 @@ List of orders :
 |"Affiche moi la météo de la semaine"        | of the current  | 
 |"Montre moi la météo de la semaine"         | week.           |
 |"Montre-moi la météo de la semaine"         |                 |
-|--------------------------------------------|-----------------|
 |"Montrer les actualités"                    | Display news    |
 |"Montre les actualités"                     |                 |
 |"Montre moi les actualités"                 |                 |
 |"Montre-moi les actualités"                 |                 |
 |"Voyons les actualités"                     |                 |
 |"Fait voir les actualités"                  |                 |
-|--------------------------------------------|------------------
 |"Cache les actualités"                      | Hide news       |
 |"Vire les actualités"                       |                 |
-|---------------------------------------------------------------
 
 
 
