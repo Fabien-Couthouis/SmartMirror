@@ -1,0 +1,11 @@
+@-webkit-keyframes MMM-VoiceInterface-pulse{
+	0% { color: #999; }
+	50% { color: #000; }
+	100% { color: #999; }
+}
+
+.MMM-VoiceInterface .pulse{
+	-webkit-animation: MMM-VoiceInterface-pulse 1s infinite;
+	animation: MMM-VoiceInterface-pulse 1s infinite;
+}
+	

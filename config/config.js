@@ -26,11 +26,31 @@ var config = {
 	units: "metric",
 
 	modules: [
-
+	
 		{
-			module: 'MMM-Remote-Control'
+			module: 'MMM-ModuleToggle',
+			config: {
+				hide: ["MMM-timer", "newsfeed"]
+			}
+		},
+				{
+			module: 'MMM-VoiceInterface',
+			position: 'bottom_bar', 
+			config: {
+			}
+		},
+
+		//~ {
+			//~ module: 'MMM-Remote-Control'
+			//~ // uncomment the following line to show the URL of the remote control on the mirror
+			//~ // , position: 'bottom_left'
+			//~ // acces via :  (si miroir sur la machine, autrement remplacer localhost par l'ip locale de la machine
+		    //~ // où le miroir est hébergé)http://localhost:8080/remote.html#main-menu
+		//~ },
+				{
+			module: 'MMM-timer',
 			// uncomment the following line to show the URL of the remote control on the mirror
-			// , position: 'bottom_left'
+			position: 'top_right'
 			// acces via :  (si miroir sur la machine, autrement remplacer localhost par l'ip locale de la machine
 		    // où le miroir est hébergé)http://localhost:8080/remote.html#main-menu
 		},
@@ -105,16 +125,17 @@ var config = {
 				showPublishDate: true
 			}
 		},
-
-
+		
 		{
-			module: "MMM-voice",
-			position: "bottom_right",
-			config: {
-				microphone: 1,
-				language: "fr"
+		module: "MMM-kalliope",
+		position: "bottom_bar",
+		config: {
+			title: "Kalliope"
 			}
-		},
+		}
+		
+
+
 	]
 
 };
