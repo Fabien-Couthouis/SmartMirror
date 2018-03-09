@@ -61,7 +61,7 @@ Temporary Items
 !/modules/node_helper/**
 
 # Ignore node modules
-node_modules
+#node_modules
 
 # Ignore module timer.
 modules/MMM-timer
