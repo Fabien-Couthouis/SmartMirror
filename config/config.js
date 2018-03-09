@@ -30,7 +30,8 @@ var config = {
 		{
 			module: 'MMM-ModuleToggle',
 			config: {
-				hide: ["MMM-timer", "newsfeed"]
+				//hide: ["MMM-timer", "newsfeed"]
+				hide: ["newsfeed"]
 			}
 		},
 				{
@@ -41,19 +42,9 @@ var config = {
 		},
 
 		//~ {
-			//~ module: 'MMM-Remote-Control'
-			//~ // uncomment the following line to show the URL of the remote control on the mirror
-			//~ // , position: 'bottom_left'
-			//~ // acces via :  (si miroir sur la machine, autrement remplacer localhost par l'ip locale de la machine
-		    //~ // où le miroir est hébergé)http://localhost:8080/remote.html#main-menu
+			//~ module: 'MMM-timer',
+			//~ position: 'top_right'
 		//~ },
-				{
-			module: 'MMM-timer',
-			// uncomment the following line to show the URL of the remote control on the mirror
-			position: 'top_right'
-			// acces via :  (si miroir sur la machine, autrement remplacer localhost par l'ip locale de la machine
-		    // où le miroir est hébergé)http://localhost:8080/remote.html#main-menu
-		},
 		{
 			module: "clock",
 			position: "top_left",
@@ -107,10 +98,6 @@ var config = {
 				]
 			}
 		},
-		// {
-		// 	module: "compliments",
-		// 	position: "lower_third"
-		// },
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
@@ -134,8 +121,6 @@ var config = {
 			}
 		}
 		
-
-
 	]
 
 };
