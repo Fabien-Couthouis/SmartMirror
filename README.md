@@ -23,7 +23,7 @@ Linux Mint or Debian. The only supported language is french.
 
 ### Voice commands
 Only language supported here is french.
-- Kalliope use a trigger word to wake up the mirror. More information [here](https://github.com/kalliope-project/kalliope/blob/master/Docs/settings.mdhttps://github.com/kalliope-project/kalliope/blob/master/Docs/settings.md).
+- Kalliope use a trigger word to wake up the mirror. More information [here](https://github.com/kalliope-project/kalliope/blob/master/Docs/settings.md).
 - Actual trigger word is 'Mirror'
 - After the trigger word, Kalliope is listening for an order.
 
