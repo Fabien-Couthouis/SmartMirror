@@ -31,7 +31,7 @@ var config = {
 			module: 'MMM-ModuleToggle',
 			config: {
 				//hide: ["MMM-timer", "newsfeed"]
-				hide: ["newsfeed"]
+				hide: ["newsfeed", "MMM-GoogleMapsTraffic"]
 			}
 		},
 				{
@@ -90,10 +90,10 @@ var config = {
 			config: {
 				calendars: [
 					{
-						maximumNumberOfDays: 2,
-						maximumEntries: 5, // Total Maximum Entries
+						maximumNumberOfDays: 1,
+						maximumEntries: 4, // Total Maximum Entries
 						symbol: "calendar-check-o ",
-						url: "https://ade.bordeaux-inp.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=3397&projectId=11&calType=ical&firstDate=2017-09-04&lastDate=2018-02-23#&login",
+						url: "https://ade.bordeaux-inp.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=5377&projectId=11&calType=ical&firstDate=2018-01-08&lastDate=2018-07-20#&login",
 					}
 				]
 			}

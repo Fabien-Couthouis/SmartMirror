@@ -1,42 +1,21 @@
 ---
-
-
-  - name: "mm-hide-newsfeed"
-    signals:
-      - order: "Cache les actualités"
-      - order: "Vire les actualités"
-    neurons:
-      - magic_mirror:
-          mm_url: "http://127.0.0.1:8080/kalliope"
-          notification: "MODULE_TOGGLE"
-          payload: {hide: ["newsfeed"], show: [], toggle:[]}
           
   - name: "mm-show-newsfeed"
     signals:
-      - order: "Montrer les actualités"
-      - order: "Montre les actualités"
-      - order: "Montre moi les actualités"
-      - order: "Montre-moi les actualités"
-      - order: "Voyons les actualités"
-      - order: "Fait voir les actualités"
+      - order: "actualités"
     neurons:
       - magic_mirror:
           mm_url: "http://127.0.0.1:8080/kalliope"
           notification: "MODULE_TOGGLE"
-          payload: {hide: [], show: ["newsfeed"], toggle:[]}
+          payload: {hide: [], show: [], toggle:["newsfeed"]}
           
           
   - name: "mm-show-weekly-meteo"
     signals:
-      - order: "Affiche la météo de la semaine"
-      - order: "Affiche moi la météo de la semaine"
-      - order: "Montre moi la météo de la semaine"
-      - order: "Montre-moi la météo de la semaine"
+      - order: "Météo de la semaine"
     neurons:
       - magic_mirror:
           mm_url: "http://127.0.0.1:8080/kalliope"
           notification: "METEO_SHOW_WEEK"
           payload: "meteo"
-      - say:
-          message: "Tout de suite, monsieur"
           
