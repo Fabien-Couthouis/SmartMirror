@@ -319,7 +319,7 @@ Module.register("MMM-forecast-io", {
 
     var bar = document.createElement("span");
     bar.className = "bar";
-    bar.innerHTML = "&nbsp;"
+    bar.innerHTML = "&nbsp"
     var barWidth = Math.round(interval * (rowMaxTemp - rowMinTemp));
     bar.style.width = barWidth + '%';
 

@@ -11,7 +11,7 @@ Module.register("calendar", {
 
 	// Define module defaults
 	defaults: {
-		maximumEntries: 5, // Total Maximum Entries
+		maximumEntries: 15, // Total Maximum Entries
 		maximumNumberOfDays: 1,
 		displaySymbol: true,
 		defaultSymbol: "calendar", // Fontawesome Symbol see http://fontawesome.io/cheatsheet/
@@ -65,6 +65,10 @@ Module.register("calendar", {
 	// Override start method.
 	start: function () {
 		Log.log("Starting module: " + this.name);
+		this.wrapped = true;
+		this.config.defaultMaximumNumberOfDays = this.config.maximumNumberOfDays;
+		this.config.defaultMaximumEntries = this.config.maximumEntries;
+		
 
 		// Set locale.
 		moment.updateLocale(config.language, this.getLocaleSpecification(config.timeFormat));
@@ -528,5 +532,25 @@ Module.register("calendar", {
 
 		this.sendNotification("CALENDAR_EVENTS", eventList);
 
-	}
+	},
+	    notificationReceived: function(notification, payload, sender) {
+    switch(notification) {
+      case "CALENDAR_WEEK":
+      console.log("matched")
+		if (this.wrapped){
+			this.config.maximumNumberOfDays = 7;
+			this.config.maximumEntries = 10;
+			this.wrapped = false;
+		}
+		else{
+			 this.config.maximumNumberOfDays = this.config.defaultMaximumNumberOfDays;
+			 this.config.maximumEntries = this.config.defaultMaximumEntries;
+		}
+		
+		this.updateDom();
+		break;
+		
+		
+    }
+  }
 });

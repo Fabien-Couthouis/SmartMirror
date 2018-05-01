@@ -19,3 +19,22 @@
           notification: "METEO_SHOW_WEEK"
           payload: "meteo"
           
+  - name: "mm-toogle-agenda"
+    signals:
+      - order: "agenda"
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "MODULE_TOGGLE"
+          payload: {hide: [], show: [], toggle:["MMM-MyCalendar", "calendar"]}
+
+  - name: "mm-toogle-traffic"
+    signals:
+      - order: "trafic"
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "MODULE_TOGGLE"
+          payload: {hide: [], show: [], toggle:["MMM-GoogleMapsTraffic"]}
+          
+          

@@ -31,7 +31,7 @@ var config = {
 			module: 'MMM-ModuleToggle',
 			config: {
 				//hide: ["MMM-timer", "newsfeed"]
-				hide: ["newsfeed", "MMM-GoogleMapsTraffic"]
+				hide: ["newsfeed", "MMM-GoogleMapsTraffic", "MMM-MyCalendar"]
 			}
 		},
 				{
@@ -51,18 +51,6 @@ var config = {
 			displaySeconds: false
 		},
 		{
-			module: "MMM-GoogleMapsTraffic",
-			position: "top_left",
-			config: {
-				key: "AIzaSyAJBhHndeTY8QMGOq9zs77R0f17blLGYH8",
-				lat: 44.8167,
-				lng: -0.6,
-				height: "200px",
-				width: "200px",
-				zoom: 12
-			}
-		},
-		{
 			module: 'MMM-forecast-io',
 			position: 'top_right',  // This can be any of the regions.
 			config: {
@@ -77,6 +65,18 @@ var config = {
 			}
 		},
 		{
+			module: "MMM-GoogleMapsTraffic",
+			position: "top_left",
+			config: {
+				key: "AIzaSyAJBhHndeTY8QMGOq9zs77R0f17blLGYH8",
+				lat: 44.8167,
+				lng: -0.6,
+				height: "200px",
+				width: "200px",
+				zoom: 12
+			}
+		},
+		{
 			module: "alert",
 		},
 		{
@@ -84,19 +84,41 @@ var config = {
 			position: "top_bar"
 		},
 		{
-			module: "calendar",
-			header: "Agenda",
-			position: "top_left",
+			module: "MMM-MyCalendar",
+			position: "top_right",	// This can be any of the regions. Best results in left or right regions.
 			config: {
+				colored: false,
+				maximumNumberOfDays: 4,
+				maximumEntries: 8,
+				getRelative: 0,
+				
 				calendars: [
 					{
-						maximumNumberOfDays: 1,
-						maximumEntries: 4, // Total Maximum Entries
-						symbol: "calendar-check-o ",
-						url: "https://ade.bordeaux-inp.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources=5377&projectId=11&calType=ical&firstDate=2018-01-08&lastDate=2018-07-20#&login",
-					}
-				]
+						url: 'https://calendar.google.com/calendar/ical/couthouis.fabien%40gmail.com/private-8c945f3f6761b1e52cab628ceff3f0f1/basic.ics',
+						symbol: 'calendar',						
+					},
+				],
 			}
+		},
+		{
+			module: "calendar",
+			position: "top_left",	// This can be any of the regions. Best results in left or right regions.
+			config: {
+				colored: false,
+				maximumNumberOfDays: 2,
+				maximumEntries: 4,
+				getRelative: 0,
+				
+				calendars: [
+					{
+						url: 'https://calendar.google.com/calendar/ical/couthouis.fabien%40gmail.com/private-8c945f3f6761b1e52cab628ceff3f0f1/basic.ics',					
+					},
+				],
+			}
+		},
+		{
+			"module": "MMM-Bordeaux-Transports",
+			"position": "top_left"
 		},
 		{
 			module: "newsfeed",
