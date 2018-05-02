@@ -12,12 +12,12 @@
           
   - name: "mm-show-weekly-meteo"
     signals:
-      - order: "Météo de la semaine"
+      - order: "météo"
     neurons:
       - magic_mirror:
           mm_url: "http://127.0.0.1:8080/kalliope"
-          notification: "METEO_SHOW_WEEK"
-          payload: "meteo"
+          notification: "METEO"
+          payload: "toggle"
           
   - name: "mm-toogle-agenda"
     signals:

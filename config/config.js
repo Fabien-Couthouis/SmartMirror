@@ -66,14 +66,14 @@ var config = {
 		},
 		{
 			module: "MMM-GoogleMapsTraffic",
-			position: "top_left",
+			position: "right",
 			config: {
 				key: "AIzaSyAJBhHndeTY8QMGOq9zs77R0f17blLGYH8",
 				lat: 44.8167,
 				lng: -0.6,
 				height: "200px",
 				width: "200px",
-				zoom: 12
+				zoom: 11
 			}
 		},
 		{
@@ -85,7 +85,7 @@ var config = {
 		},
 		{
 			module: "MMM-MyCalendar",
-			position: "top_right",	// This can be any of the regions. Best results in left or right regions.
+			position: "top_left",	// This can be any of the regions. Best results in left or right regions.
 			config: {
 				colored: false,
 				maximumNumberOfDays: 4,

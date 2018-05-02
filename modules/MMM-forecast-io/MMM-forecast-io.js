@@ -130,11 +130,12 @@ Module.register("MMM-forecast-io", {
     switch(notification) {
       case "DOM_OBJECTS_CREATED":
         break;
-      case "METEO_SHOW_WEEK":
-		console.log("Show weekly meteo");
-		this.config.maxDaysForecast = 7;
+      case "METEO":
+		if (this.config.maxDaysForecast === 7)
+			this.config.maxDaysForecast = 1;
+		else this.config.maxDaysForecast = 7;	
 		this.updateDom();
-		this.config.maxDaysForecast = 1;
+		
 		break;
 		
     }
