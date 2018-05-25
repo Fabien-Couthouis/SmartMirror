@@ -22,6 +22,9 @@
   - name: "mm-toogle-agenda"
     signals:
       - order: "agenda"
+      - order: "planning"
+      - order: "calendrier"
+      
     neurons:
       - magic_mirror:
           mm_url: "http://127.0.0.1:8080/kalliope"
@@ -37,4 +40,25 @@
           notification: "MODULE_TOGGLE"
           payload: {hide: [], show: [], toggle:["MMM-GoogleMapsTraffic"]}
           
-          
+
+
+  - name: "mm-hide-all"
+    signals:
+      - order: "veille"
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "MODULE_TOGGLE"
+          payload: {hide: ["MMM-MyCalendar", "calendar", "MMM-forecast-io", "MMM-GoogleMapsTraffic", "MMM-VoiceInterface", "clock", "newsfeed"], show: [], toggle:[]}
+
+  - name: "mm-show-all"
+    signals:
+      - order: "réinitialiser"
+      - order: "réinitialisation"
+      - order: "réveil"
+      
+    neurons:
+      - magic_mirror:
+          mm_url: "http://127.0.0.1:8080/kalliope"
+          notification: "MODULE_TOGGLE"
+          payload: {hide: [], show: ["MMM-MyCalendar", "MMM-forecast-io", "MMM-VoiceInterface", "clock"], toggle:[]}

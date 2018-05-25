@@ -14,6 +14,7 @@ default_trigger: "snowboy"
 # Available engine are:
 # - snowboy
 triggers:
+#Miroir peut ne pas fonctionner du fait du manque de données, dans ce cas utiliser jarvis.pmdl 
   - snowboy:
       pmdl_file: "trigger/miroir.pmdl"
 
