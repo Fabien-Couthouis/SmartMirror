@@ -1,5 +1,5 @@
 /* Magic Mirror
- * Module: MMM-timer
+ * Module: MMM-VoiceInterface
  *
  * By Fabien Couthouis
  */
