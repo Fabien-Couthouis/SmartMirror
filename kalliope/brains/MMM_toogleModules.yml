@@ -49,7 +49,7 @@
       - magic_mirror:
           mm_url: "http://127.0.0.1:8080/kalliope"
           notification: "MODULE_TOGGLE"
-          payload: {hide: ["MMM-MyCalendar", "calendar", "MMM-forecast-io", "MMM-GoogleMapsTraffic", "MMM-VoiceInterface", "clock", "newsfeed"], show: [], toggle:[]}
+          payload: {hide: ["calendar", "MMM-forecast-io", "MMM-Bordeaux-Transports", "MMM-GoogleMapsTraffic", "MMM-VoiceInterface", "clock", "newsfeed"], show: [], toggle:[]}
 
   - name: "mm-show-all"
     signals:

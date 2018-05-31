@@ -15,7 +15,7 @@ module.exports = NodeHelper.create({
     let self = this;
     let options = {
       url: url,
-      auth: { username: this.config.navitiaKey, password: this.config.mdp }
+      auth: { username: this.config.navitiaKey, password: this.config.password }
     };
     request.get(options, function(error, response, body) {
       if (error || response.statusCode !== 200) {

@@ -8,18 +8,6 @@
  *
  */
 
-//https://www.coordonnees-gps.fr
-//Default = ENSC
-var latitude =  44.806287;
-var longitude = -0.596923;
-
-var googleApiKey = "";
-var navitiaKey = "";
-var navitiaPassword = "";
-var darkSkyApiKey = "";
-var agendaUrl = "";
-var newsUrl = "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/";
-
 var config = {
 	address: "localhost", // Address to listen on, can be:
 	                      // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
@@ -42,13 +30,21 @@ var config = {
 		{
 			module: 'MMM-ModuleToggle',
 			config: {
+				//hide: ["MMM-timer", "newsfeed"]
 				hide: ["newsfeed", "MMM-GoogleMapsTraffic", "MMM-MyCalendar"]
 			}
 		},
 				{
 			module: 'MMM-VoiceInterface',
 			position: 'bottom_bar', 
+			config: {
+			}
 		},
+
+		//~ {
+			//~ module: 'MMM-timer',
+			//~ position: 'top_right'
+		//~ },
 		{
 			module: "clock",
 			position: "top_left",
@@ -58,9 +54,11 @@ var config = {
 			module: 'MMM-forecast-io',
 			position: 'top_right',  // This can be any of the regions.
 			config: {
-				apiKey: darkSkyApiKey,
-				latitude: latitude,
-				longitude: longitude,
+				// See 'Configuration options' for more information.
+				apiKey: '81112327c2b317864db2493852aee021', // Dark Sky API key.
+				// Only required if geolocation doesn't work:
+				latitude: 44.8167,
+				longitude: -0.6,
 				showForecast: true,
 				maxDaysForecast: 1,
 				enablePrecipitationGraph: true,
@@ -70,9 +68,9 @@ var config = {
 			module: "MMM-GoogleMapsTraffic",
 			position: "right",
 			config: {
-				key: googleApiKey, 
-				lat: latitude,
-				lng: longitude,
+				key: "AIzaSyAJBhHndeTY8QMGOq9zs77R0f17blLGYH8",
+				lat: 44.8167,
+				lng: -0.6,
 				height: "200px",
 				width: "200px",
 				zoom: 11
@@ -80,10 +78,6 @@ var config = {
 		},
 		{
 			module: "alert",
-		},
-		{
-			module: "updatenotification",
-			position: "top_bar"
 		},
 		{
 			module: "MMM-MyCalendar",
@@ -96,7 +90,7 @@ var config = {
 				
 				calendars: [
 					{
-						url: agendaUrl,
+						url: 'https://calendar.google.com/calendar/ical/couthouis.fabien%40gmail.com/private-8c945f3f6761b1e52cab628ceff3f0f1/basic.ics',
 						symbol: 'calendar',						
 					},
 				],
@@ -113,21 +107,14 @@ var config = {
 				
 				calendars: [
 					{
-						url: agendaUrl,					
+						url: 'https://calendar.google.com/calendar/ical/couthouis.fabien%40gmail.com/private-8c945f3f6761b1e52cab628ceff3f0f1/basic.ics',					
 					},
 				],
 			}
 		},
 		{
 			"module": "MMM-Bordeaux-Transports",
-			"position": "top_left",
-			config: {
-				homeLatitude: latitude,
-				homeLongitude: longitude,
-    			navitiaKey: navitiaKey,
-    			password: navitiaPassword,
-				googleMapKey: googleApiKey,
-			}
+			"position": "top_left"
 		},
 		{
 			module: "newsfeed",
@@ -135,8 +122,8 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "Actualités",
-						url: newsUrl,
+						title: "BFM",
+						url: "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/"
 					}
 				],
 				showSourceTitle: true,
