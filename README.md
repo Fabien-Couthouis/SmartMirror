@@ -26,7 +26,23 @@ Only language supported here is french.
 - Kalliope use a trigger word to wake up the mirror. More information [here](https://github.com/kalliope-project/kalliope/blob/master/Docs/settings.md).
 - Actual trigger word is 'Mirror'
 - After the trigger word, Kalliope is listening for an order.
-  /          
+
+List of orders :
+
+|Order                                       | Function        |
+------------------------------------------|----------------|
+"Affiche la météo de la semaine" | Display meteo of the current week  
+"Affiche moi la météo de la semaine"| /
+"Montre moi la météo de la semaine" |  /         
+"Montre-moi la météo de la semaine" |  /               
+"Montrer les actualités"    | Display news    
+"Montre les actualités"    |   /              
+"Montre moi les actualités"  |  /               
+"Montre-moi les actualités"  |   /              
+"Voyons les actualités"    |   /              
+"Fait voir les actualités"     |   /              
+"Cache les actualités"   | Hide news       
+"Vire les actualités"  |       /          
 
 
 

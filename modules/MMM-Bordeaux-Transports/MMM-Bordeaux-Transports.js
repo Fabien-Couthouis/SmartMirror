@@ -9,11 +9,11 @@ Module.register("MMM-Bordeaux-Transports", {
   // Definition des paramètres de configuration par défaut, accessibles via this.config.nomVariable
   defaults: {
     updateInterval: 1 * 5 * 1000, //temps de rafraichissement en ms, RELOAD CHAQUE 5 SECONDES POUR L'INSTANT
-    homeLatitude: 44.8107872,//44.815051, //https://www.coordonnees-gps.fr
-    homeLongitude: -0.5911062999999785,//-0.588111,
-    navitiaKey: "3cb5aaa3-2743-42f8-929c-b5f36ff64cb9",
-    mdp: "fabien47",
-    googleMapKey: "AIzaSyC1y4lpgvpsbjTxBczKKMjUamquldQR8AY",
+    homeLatitude: 44.806287, //ENSC
+    homeLongitude: -0.596923,
+    navitiaKey: "",
+    password: "",
+    googleMapKey: "",
   },
 
   // Récupère les feuilles de style (fontawesome pour les icones, à virer si inutile)
