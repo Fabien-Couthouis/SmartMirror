@@ -1,6 +1,3 @@
-#tgz files
-*.tgz
-
 # Various Node ignoramuses.
 
 logs
@@ -63,12 +60,14 @@ Temporary Items
 !/modules/node_helper
 !/modules/node_helper/**
 
-# Ignore module timer.
-modules/MMM-timer
-
+# Ignore all modules except the default modules.
+/modules/**
+!/modules/default
+!/modules/default/**
+!/modules/README.md**
 
 # Ignore changes to the custom css files.
-#/css/custom.css
+/css/custom.css
 
 # Vim
 ## swap
