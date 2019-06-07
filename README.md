@@ -5,7 +5,7 @@
 "voice controlled personal assistant" [Kalliope](https://github.com/kalliope-project/kalliope/blob/master/Docs/installation.md).
 SmartMirror is built to work on Raspberry 3 (older Raspberries are not recommended due to the lack of power for using Kalliope) and debian-based Linux distributions like Ubuntu,
 Linux Mint or Debian. The only supported language is french.
-You can find demonstration videos [on the website repository](https://github.com/Fabien-Couthouis/smartmirror_web/tree/master/assets/videos)
+You can find demonstration videos [on the website repository](https://github.com/Fabien-Couthouis/smartmirror_web/tree/master/assets/videos).
 
 
 ### Installation
