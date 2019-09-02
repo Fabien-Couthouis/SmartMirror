@@ -1,5 +1,6 @@
 # SmartMirror: personnal configuration for MagicMirror 
 
+[Project website (in french)](https://smartmirrorweb-fjtmc4jqk.now.sh/index.php)
 
 **SmartMirror** contains a preconfigured installation of both [MagicMirror](https://github.com/MichMich/MagicMirror) and the 
 "voice controlled personal assistant" [Kalliope](https://github.com/kalliope-project/kalliope/blob/master/Docs/installation.md).
